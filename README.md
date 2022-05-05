@@ -22,13 +22,13 @@ Conda (To manage packages within the applications own environment)
 - Create the env
 
 ```shell
-conda create --name bgd_lfa python=3.10.4
+conda create --name bgd_ewa python=3.10.4
 ```
 
 - enter the environment
 
 ```shell
-conda activate bgd_lfa
+conda activate bgd_ewa
 ```
 
 - install requirements 
@@ -76,7 +76,7 @@ output_directory: Full path to where you would like the output created.
 - Test the application
 
 To confirm that all the variables are correct and the application is set up properly you will want to do a test run.
-To do this while in the bgd_lfa environment run the following.
+To do this while in the bgd_ewa environment run the following.
 
 ```shell
 python main.py
@@ -95,3 +95,20 @@ python main.py 10
 I recommend using the root cron, this is useful when working in a team where multiple may need to access or update 
 the cron jobs.  It also helps to avoid and permission errors that could be caused by a specific user owning the data
 or directory structure.
+
+```shell
+sudo crontab -e
+```
+
+Use the arrows to navigate to the bottom of this file then begin editing.  You will need the full path to your 
+environments' python, the full path to the main.py file, and a full path to where you want log files to be written.
+You will also need to decide when you would like to run the application.  With this information you can create the 
+cron string to enter on the new line like:
+
+```shell
+0 16 * * * /home/username/conda/anaconda3/envs/bgd_ewa/bin/python /home/username/Bangladesh-Extreme-Weather-Alert/main.py >> /home/username/logs/bgd_ewa_`date +\%Y\%m\%d\%H\%M\%S`.log 2>&1
+```
+
+This example will run the application daily at 1600 hours, it doesn't pass in a delta day, so it will use the current
+day as the file date, and it will output the log file to the log/ directory of the user "username".  You will need
+to adjust these paths to fit your system structure and naming.
