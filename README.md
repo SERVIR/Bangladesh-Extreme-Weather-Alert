@@ -28,19 +28,14 @@ Conda (To manage packages within the applications own environment)
 - Create the env
 
 ```shell
-conda create --name bgd_ewa python=3.10.4
+cd Bangladesh-Extreme-Weather-Alert
+conda create --name bgd_ewa --file requirements.txt
 ```
 
 - enter the environment
 
 ```shell
 conda activate bgd_ewa
-```
-
-- install requirements 
-```shell
-cd {your application base directory}
-conda install --file requirements.txt 
 ```
 
 - Create forecast definition file
