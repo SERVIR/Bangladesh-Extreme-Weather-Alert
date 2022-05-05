@@ -10,8 +10,10 @@ HIWAT model output by pointing the "data_path" in the configuration to the NetCD
 be created for the current days date, so it needs to be run after the model is completed.  You can also 
 pass in an argument when running the application to produce the data from (current day - n)
 ## Sample forecast outputs
+# forecast map
 ![Sample Forecast](sample_product/20220425_day_1_forecast_map.jpg)
 
+# forecast CSV
 ![Sample Forecast](sample_product/csv_sample.jpg)
 
 ## Setup and Installation
