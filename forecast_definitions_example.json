@@ -1,0 +1,20 @@
+{
+  "forecasts":[
+    {
+      "name": "Lightning forecast Day 1 ens",
+      "data_path": "/media/sf_anothershare/hkhEnsemble_{{YYYYMMdd}}1200_day1_latlon.nc",
+      "data_variable": "sumprob-lfa-thresh0p07",
+      "shapefile_path": "/media/sf_anothershare/bgd_admin2/bgd_admbnda_adm2_bbs_20201113.shp",
+      "output_prefix": "day_1_",
+      "output_directory": "/media/sf_anothershare/daily_product"
+    },
+    {
+      "name": "Lightning forecast Day 2 ens",
+      "data_path": "/media/sf_anothershare/hkhEnsemble_{{YYYYMMdd}}1200_day2_latlon.nc",
+      "data_variable": "sumprob-lfa-thresh0p07",
+      "shapefile_path": "/media/sf_anothershare/bgd_admin2/bgd_admbnda_adm2_bbs_20201113.shp",
+      "output_prefix": "day_2_",
+      "output_directory": "/media/sf_anothershare/daily_product"
+    }
+  ]
+}
