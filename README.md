@@ -9,6 +9,10 @@ and a forecast map clipped to the boundary of the shapefile. These products are 
 HIWAT model output by pointing the "data_path" in the configuration to the NetCDF.  The product will
 be created for the current days date, so it needs to be run after the model is completed.  You can also 
 pass in an argument when running the application to produce the data from (current day - n)
+## Sample forecast outputs
+![Sample Forecast](sample_product/20220425_day_1_forecast_map.jpg)
+
+![Sample Forecast](sample_product/csv_sample.jpg)
 
 ## Setup and Installation
 The installation described here will make use of conda to ensure there are no package conflicts with 
