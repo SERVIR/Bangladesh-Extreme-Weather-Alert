@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![SERVIR: Global](https://img.shields.io/badge/SERVIR-Global-green)](https://servirglobal.net)
-[![conda: conda-forge](https://shields.io/badge/conda%7Cconda--forge-v3.7.1-blue)](https://servirglobal.net)
+[![conda: conda-forge](https://shields.io/badge/conda%7Cconda--forge-v3.7.1-blue)](https://conda.io/)
 
 This tool creates a CSV of Bangladesh extreme weather statistics for each feature in the configured shapefile
 and a forecast map clipped to the boundary of the shapefile. These products are derived from the 
