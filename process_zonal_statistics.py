@@ -78,7 +78,9 @@ def run_statistics(delta_days):
                     if os.path.exists(shp_name):
                         mem_driver.DeleteDataSource(shp_name)
                     tp_ds = mem_driver.CreateDataSource(shp_name)
-                    tp_lyr = tp_ds.CreateLayer('polygons', None, ogr.wkbPolygon)
+                    dest_srs = ogr.osr.SpatialReference()
+                    dest_srs.ImportFromEPSG(4326)
+                    tp_lyr = tp_ds.CreateLayer('polygons', dest_srs, ogr.wkbPolygon)
                     tp_lyr.CreateFeature(p_feat.Clone())
                     offsets = bounding_box_to_offsets(p_feat.GetGeometryRef().GetEnvelope(),
                                                       geotiff)
