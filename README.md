@@ -64,7 +64,9 @@ name: This variable is for reference purposes, give each forecast a unique name 
 
 data_path: The full path to your NetCDF file which is produced from the HIWAT model run.  Your files
 will have the date in the name like "hkhEnsemble_202205051200_day1_latlon.nc", replace the date portion
-20220505 with {{YYYYMMdd}} to make the variable "hkhEnsemble_{{YYYYMMdd}}1200_day1_latlon.nc"
+20220505 with {{YYYYMMdd}} to make the variable "hkhEnsemble_{{YYYYMMdd}}1200_day1_latlon.nc".  You may also 
+have the data in a directory with the same naming convention, simply do the same thing for this so 
+change 2022050512/ in the path to {{YYYYMMdd}}12/
 
 data_variable: The variable within the NetCDF you would like to use for the statistics and forecast map
 
