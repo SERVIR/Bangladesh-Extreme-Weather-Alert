@@ -176,10 +176,7 @@ xz=5.2.5=h516909a_1
 zipp=3.8.0=pyhd8ed1ab_0
 zlib=1.2.11=h166bdaf_1014
 zstd=1.5.2=ha95c52a_0
-rasterstats~=0.16.0
-xarray~=2022.3.0
-regionmask~=0.9.0
-geopandas~=0.9.0
-matplotlib~=3.5.2
-cartopy~=0.20.2
-numpy~=1.22.3
+rasterstats==0.16.0
+xarray==2022.3.0
+regionmask==0.9.0
+geopandas==0.9.0
