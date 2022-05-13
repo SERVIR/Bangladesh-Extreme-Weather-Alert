@@ -31,7 +31,7 @@ def create_forecast_map(delta_days):
             scaleMin = 0
             scaleMax = 15
             colormap = 'terrain_r'  # use reversed terrain
-            figureFile = file_date + "_" + forecast["output_prefix"] + "forecast_map.jpg"
+            figureFile = file_date + "_" + forecast["output_prefix"] + "_forecast_map.jpg"
 
             bmdLonMin, bmdLatMin, bmdLonMax, bmdLatMax = bmdAdmin2.total_bounds
 
