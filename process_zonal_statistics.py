@@ -29,13 +29,13 @@ def run_statistics(delta_days):
                 for stat in zs:
                     data = [
                         stat['properties']["ADM2_PCODE"],
-                        stat['properties']["min"],
-                        stat['properties']["max"],
-                        stat['properties']["mean"],
-                        stat['properties']["median"],
-                        stat['properties']["std"],
-                        stat['properties']["sum"],
-                        stat['properties']["count"]]
+                        round(stat['properties']["min"], 2),
+                        round(stat['properties']["max"], 2),
+                        round(stat['properties']["mean"], 2),
+                        round(stat['properties']["median"], 2),
+                        round(stat['properties']["std"], 2),
+                        round(stat['properties']["sum"], 2),
+                        round(stat['properties']["count"], 2)]
                     writer.writerow(data)
         return True
     except Exception as e:
