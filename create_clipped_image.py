@@ -7,13 +7,11 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 from datetime import datetime, timedelta
+import utilities
 
 
 def create_forecast_map(delta_days):
-
-    f = open('forecast_definitions.json')
-    forecast_definitions = json.load(f)
-    f.close()
+    forecast_definitions = utilities.get_forecast_definitions()
 
     file_date = (datetime.today() - timedelta(days=delta_days)).strftime('%Y%m%d')
 

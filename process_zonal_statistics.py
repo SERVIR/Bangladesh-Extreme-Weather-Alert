@@ -3,13 +3,13 @@ import os
 from datetime import datetime, timedelta
 import json
 import rasterstats
+import utilities
 
 
 def run_statistics(delta_days):
     try:
-        f = open('forecast_definitions.json')
-        forecast_definitions = json.load(f)
-        f.close()
+
+        forecast_definitions = utilities.get_forecast_definitions()
 
         file_date = (datetime.today() - timedelta(days=delta_days)).strftime('%Y%m%d')
         for forecast in forecast_definitions["forecasts"]:
