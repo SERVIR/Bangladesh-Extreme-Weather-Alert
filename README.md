@@ -29,7 +29,7 @@ Conda (To manage packages within the applications own environment)
 
 ```shell
 cd Bangladesh-Extreme-Weather-Alert
-conda create --name bgd_ewa --file requirements.txt
+conda env create -f environment.yml
 ```
 
 - enter the environment

@@ -1,0 +1,13 @@
+name: bgd_ewa
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - gdal
+  - rioxarray
+  - geopandas
+  - regionmask==0.9.0
+  - rasterstats
+  - cartopy
+
