@@ -38,7 +38,8 @@ conda env create -f environment.yml
 conda activate bgd_ewa
 ```
 
-- Create forecast definition file
+- Create forecast definition file 
+###### Note: If windows use copy instead of cp
 ```shell
 cp forecast_definitions_example.json forecast_definitions.json
 ```
@@ -50,6 +51,7 @@ to match your system.  The definitions are an array of forecasts, you may add as
 many or as few as you would like assuming that you have the appropriate data for each.
 The forecast objects are defined as described in the following structure, you may 
 also refer to the examples in the forecast_definitions_example.json.  
+###### Note: If using on windows: be sure to use double slashes in the paths ie: C:\\\hiwat\\\\{{YYYYMMdd}}12\\\hkhEnsemble_{{YYYYMMdd}}1200_day1_latlon.nc
 ```json
 {
       "name": "", 
@@ -94,10 +96,11 @@ as seen in the following example where we run the forecast for the data ten days
 python main.py 10
 ```
 
-- Set up cron to automate the production of the forecast products
+- Set up cron to automate the production of the forecast products on linux
 I recommend using the root cron, this is useful when working in a team where multiple may need to access or update 
 the cron jobs.  It also helps to avoid and permission errors that could be caused by a specific user owning the data
 or directory structure.
+###### Note: For windows you will have to set up a task in Task Manager making sure to use full pathing as below
 
 ```shell
 sudo crontab -e
