@@ -91,8 +91,15 @@ def create_forecast_map(delta_days):
                                                                            add_colorbar=False,
                                                                            extend='both',
                                                                            zorder=3)
+            post_title = ""
+            if 'lfa' in var_to_plot:
+                post_title = ' - Lightning'
+            elif 'precip3h' in var_to_plot:
+                post_title = ' - Rain'
+            elif 'tcolg' in var_to_plot:
+                post_title = ' - Hail'
             # Add a title
-            ax.set_title(masked_hiwat[var_to_plot].attrs['long_name'].upper(),
+            ax.set_title(masked_hiwat[var_to_plot].attrs['long_name'].upper() + post_title,
                          {'fontsize': 16, 'fontweight': 'bold'})
             # Add the colorbar manually.
             cb = plt.colorbar(image,
