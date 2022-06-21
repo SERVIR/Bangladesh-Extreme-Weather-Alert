@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![SERVIR: Global](https://img.shields.io/badge/SERVIR-Global-green)](https://servirglobal.net)
 [![conda: conda-forge](https://shields.io/badge/conda%7Cconda--forge-v3.7.1-blue)](https://conda.io/)
+[![Python: 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/)
 
 This tool creates a CSV of Bangladesh extreme weather statistics for each feature in the configured shapefile
 and a forecast map clipped to the boundary of the shapefile. These products are derived from the 
@@ -118,3 +119,19 @@ cron string to enter on the new line like:
 This example will run the application daily at 1600 hours, it doesn't pass in a delta day, so it will use the current
 day as the file date, and it will output the log file to the log/ directory of the user "username".  You will need
 to adjust these paths to fit your system structure and naming.
+
+## Contact
+
+### Authors
+
+- [Billy Ashmall (NASA)](mailto:billy.ashmall@nasa.gov)
+
+## License and Distribution
+
+Bangladesh Extreme Weather Alert is distributed by SERVIR under the terms of the MIT License. See
+[LICENSE](https://github.com/SERVIR/Bangladesh-Extreme-Weather-Alert/blob/master/LICENSE) in this directory for more information.
+
+## Privacy & Terms of Use
+
+Bangladesh Extreme Weather Alert Delivery abides to all of SERVIR's privacy and terms of use as described
+at [https://servirglobal.net/Privacy-Terms-of-Use](https://servirglobal.net/Privacy-Terms-of-Use).
