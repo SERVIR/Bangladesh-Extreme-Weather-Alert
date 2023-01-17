@@ -79,6 +79,21 @@ output_prefix: A unique prefix for each forecast to avoid overwriting the output
 
 output_directory: Full path to where you would like the output created. 
 
+Along with the array of forecasts, there is an smtp_settings object which contains:
+
+smtp: the smtp that you will use for sending the emails
+name: the email address of the sending user
+password: the password for the sending user
+
+Finally there is the email_list_xlsx key.  This key is where you can change the name and location of the 
+email list xlsx file if you desire.  If you leave it where it is and only edit the contents then you
+will only need to keep the file name here.
+
+Now you can add email addresses to the xlsx file.  Remove the sample email addresses prior to adding.  
+Be sure that you do not edit or remove the header "Email", 
+simply add email addresses one per row in the Email column.  For testing you may want to start with only a 
+couple of addresses that you can confirm received the alerts.
+
 - Test the application
 
 To confirm that all the variables are correct and the application is set up properly you will want to do a test run.

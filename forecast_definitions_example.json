@@ -16,5 +16,11 @@
       "output_prefix": "day_2_",
       "output_directory": "/media/sf_anothershare/daily_product"
     }
-  ]
+  ],
+  "smtp_settings": {
+    "smtp": "smtp.gmail.com",
+    "user": "whatever_ur_email_is",
+    "password": "whatever_ur_password_is"
+  },
+  "email_list_xlsx": "bewa_email_list.xlsx"
 }
