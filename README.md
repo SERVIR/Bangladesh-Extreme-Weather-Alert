@@ -87,6 +87,8 @@ password: the password for the sending user
 
 Finally, there is the email_list_xlsx key.  This key is where you set the name and full path to the location of the 
 email list xlsx file.  Because you will be running the application with cron you will need the full path to the file.
+Copy this xlsx file out of the project directory to avoid having it overwritten when you ```git pull``` to update 
+this software in the future.  Enter the full path to the copied file in the forecast_definitions.json file. 
 
 Now you can add email addresses to the xlsx file.  Remove the sample email addresses prior to adding.  
 Be sure that you do not edit or remove the header "Email", 
