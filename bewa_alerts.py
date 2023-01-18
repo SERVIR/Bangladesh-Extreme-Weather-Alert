@@ -207,6 +207,7 @@ def create_and_send_message(to_email, forecast_settings, file_date):
 
     image_cid = make_msgid(domain='icimod.org')
 
+    dir_path = os.path.dirname(os.path.realpath(__file__))
     msg.attach(MIMEText(body % ("logo.png", "logo.png"), 'html'))
     output_directory = forecast_settings["forecasts"][0]["output_directory"]
     attachment_count = 0
@@ -220,7 +221,7 @@ def create_and_send_message(to_email, forecast_settings, file_date):
                 msg = attach_file(msg, f)
 
     if attachment_count > 0:
-        with open("logo.png", 'rb') as fp:
+        with open(os.path.join(dir_path, "logo.png"), 'rb') as fp:
             img = MIMEImage(fp.read())
         img.add_header('Content-ID', '<{}>'.format("logo.png"))
         msg.attach(img)
