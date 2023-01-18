@@ -25,7 +25,7 @@ def attach_file(message, full_file_path):
     p.set_payload((attachment).read())
     # encode into base64
     encoders.encode_base64(p)
-    p.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+    p.add_header('Content-Disposition', "attachment; filename= %s" % os.path.basename(filename))
     # attach the instance 'p' to instance 'msg'
     message.attach(p)
     return message
