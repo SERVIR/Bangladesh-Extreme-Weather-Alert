@@ -1,3 +1,4 @@
 forecast_definitions.json
 *.pyc
 .idea
+logs

@@ -19,7 +19,7 @@ pass in an argument when running the application to produce the data from (curre
 
 ## Setup and Installation
 The installation described here will make use of conda to ensure there are no package conflicts with 
-existing or future applications on the machine.  It is highly recommended to use a dedicated environment 
+existing or future applications on the machine.  It is highly recommended using a dedicated environment 
 for this application to avoid any issues.
 
 ### Recommended
@@ -52,7 +52,7 @@ to match your system.  The definitions are an array of forecasts, you may add as
 many or as few as you would like assuming that you have the appropriate data for each.
 The forecast objects are defined as described in the following structure, you may 
 also refer to the examples in the forecast_definitions_example.json.  
-###### Note: If using on windows: be sure to use double slashes in the paths ie: C:\\\hiwat\\\\{{YYYYMMdd}}12\\\hkhEnsemble_{{YYYYMMdd}}1200_day1_latlon.nc
+###### Note: If using on Windows: be sure to use double slashes in the paths ie: C:\\\hiwat\\\\{{YYYYMMdd}}12\\\hkhEnsemble_{{YYYYMMdd}}1200_day1_latlon.nc
 ```json
 {
       "name": "", 
@@ -79,19 +79,18 @@ output_prefix: A unique prefix for each forecast to avoid overwriting the output
 
 output_directory: Full path to where you would like the output created. 
 
-Along with the array of forecasts, there is an smtp_settings object which contains:
+Along with the array of forecasts, there is a smtp_settings object which contains:
 
 smtp: the smtp that you will use for sending the emails
 name: the email address of the sending user
 password: the password for the sending user
 
-Finally there is the email_list_xlsx key.  This key is where you can change the name and location of the 
-email list xlsx file if you desire.  If you leave it where it is and only edit the contents then you
-will only need to keep the file name here.
+Finally, there is the email_list_xlsx key.  This key is where you set the name and full path to the location of the 
+email list xlsx file.  Because you will be running the application with cron you will need the full path to the file.
 
 Now you can add email addresses to the xlsx file.  Remove the sample email addresses prior to adding.  
 Be sure that you do not edit or remove the header "Email", 
-simply add email addresses one per row in the Email column.  For testing you may want to start with only a 
+simply add email addresses one per row in the Email column.  For testing, you may want to start with only a 
 couple of addresses that you can confirm received the alerts.
 
 - Test the application
